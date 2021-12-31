@@ -9,6 +9,7 @@
 "./Src/gpio.o"
 "./Src/hts221.o"
 "./Src/i2c.o"
+"./Src/lps25hb.o"
 "./Src/main.o"
 "./Src/stm32f3xx_it.o"
 "./Src/syscalls.o"

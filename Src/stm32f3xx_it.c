@@ -185,7 +185,7 @@ void EXTI3_IRQHandler(void) {
 	if (checkButtonState(GPIOB, 3,1,30, 20)) {
 		button++;
 		shift=0;
-		if (button == 2)
+		if (button == 4)
 			button = 0;
 	}
 

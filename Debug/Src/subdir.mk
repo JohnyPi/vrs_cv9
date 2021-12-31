@@ -9,6 +9,7 @@ C_SRCS += \
 ../Src/gpio.c \
 ../Src/hts221.c \
 ../Src/i2c.c \
+../Src/lps25hb.c \
 ../Src/main.c \
 ../Src/stm32f3xx_it.c \
 ../Src/syscalls.c \
@@ -21,6 +22,7 @@ OBJS += \
 ./Src/gpio.o \
 ./Src/hts221.o \
 ./Src/i2c.o \
+./Src/lps25hb.o \
 ./Src/main.o \
 ./Src/stm32f3xx_it.o \
 ./Src/syscalls.o \
@@ -33,6 +35,7 @@ C_DEPS += \
 ./Src/gpio.d \
 ./Src/hts221.d \
 ./Src/i2c.d \
+./Src/lps25hb.d \
 ./Src/main.d \
 ./Src/stm32f3xx_it.d \
 ./Src/syscalls.d \

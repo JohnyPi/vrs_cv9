@@ -19,6 +19,7 @@
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
+#include <lps25hb.h>
 #include <hts221.h>
 #include "main.h"
 #include "i2c.h"
@@ -55,11 +56,14 @@ int main(void) {
 
 	MX_I2C1_Init();
 
+	lps25hb_init();
 	hts221_init();
 
 	char cislo[20];
 	float temp = 0;
+	float press =0;
 	float humi =0;
+	float altitude=0;
 
 	while (1) {
 		switch (button) {
@@ -69,6 +73,15 @@ int main(void) {
 				sprintf(cislo, "TEMP_%.1f", temp);
 				break;
 			case 1:
+				press = lps25hb_get_pressure();
+				sprintf(cislo, "BAR_%.2f", press);
+				break;
+			case 2:
+				press = lps25hb_get_pressure();
+				altitude =(44330 * ( 1 - (   pow(((press*100)/ 101325),(1 / 5.255)))));
+				sprintf(cislo, "ALT_%d", (uint16_t)altitude);
+				break;
+			case 3:
 				humi = hts221_get_humidity();
 				sprintf(cislo, "HUM_%d", (uint8_t)humi);
 				break;

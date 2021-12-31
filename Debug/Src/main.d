@@ -1,4 +1,4 @@
-Src/main.o: ../Src/main.c ../Inc/hts221.h ../Inc/main.h \
+Src/main.o: ../Src/main.c ../Inc/lps25hb.h ../Inc/main.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_rcc.h \
  ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h \
  ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h \
@@ -18,9 +18,10 @@ Src/main.o: ../Src/main.c ../Inc/hts221.h ../Inc/main.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_tim.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_gpio.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_i2c.h ../Inc/i2c.h \
- ../Inc/main.h ../Inc/i2c.h ../Inc/gpio.h ../Inc/tim.h ../Inc/display.h
+ ../Inc/hts221.h ../Inc/main.h ../Inc/i2c.h ../Inc/gpio.h ../Inc/tim.h \
+ ../Inc/display.h
 
-../Inc/hts221.h:
+../Inc/lps25hb.h:
 
 ../Inc/main.h:
 
@@ -63,6 +64,8 @@ Src/main.o: ../Src/main.c ../Inc/hts221.h ../Inc/main.h \
 ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_i2c.h:
 
 ../Inc/i2c.h:
+
+../Inc/hts221.h:
 
 ../Inc/main.h:
 
